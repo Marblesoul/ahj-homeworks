@@ -1,5 +1,9 @@
 # Домашнее задание к занятию "4.Организация тестирования"
 
+[![Testing CI](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/testing.yml/badge.svg)](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/testing.yml)
+
+[GitHub Pages](https://marblesoul.github.io/ahj-homeworks/)
+
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ можно использовать любой менеджер пакетов

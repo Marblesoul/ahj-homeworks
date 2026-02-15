@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.card-validator {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 460px;
+}
+
+.card-icons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  padding: 6px 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #999;
+  background: #f9f9f9;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.card-icon.active {
+  border-color: #4caf50;
+  color: #333;
+  background: #e8f5e9;
+}
+
+.card-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.card-input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.card-input:focus {
+  border-color: #4caf50;
+}
+
+.card-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.card-btn:hover {
+  background: #43a047;
+}
+
+.card-result {
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 20px;
+}
+
+.card-result.valid {
+  color: #4caf50;
+}
+
+.card-result.invalid {
+  color: #f44336;
+}

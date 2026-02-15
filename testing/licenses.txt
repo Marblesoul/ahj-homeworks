@@ -1,0 +1,2 @@
+Card system logos are represented as styled text labels.
+No third-party images are used in this project.
