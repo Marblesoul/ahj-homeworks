@@ -2,7 +2,7 @@
 
 [![Testing CI](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/testing.yml/badge.svg)](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/testing.yml)
 
-[GitHub Pages](https://marblesoul.github.io/ahj-homeworks/)
+[GitHub Pages](https://marblesoul.github.io/ahj-homeworks/testing/)
 
 Правила сдачи задания:
 

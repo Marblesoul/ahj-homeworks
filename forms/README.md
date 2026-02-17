@@ -2,7 +2,7 @@
 
 [![Forms CI](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/forms.yml/badge.svg)](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/forms.yml)
 
-[GitHub Pages](https://marblesoul.github.io/ahj-homeworks/)
+[GitHub Pages](https://marblesoul.github.io/ahj-homeworks/forms/)
 
 Правила сдачи задания:
 1. **Важно**: в рамках этого ДЗ вы можете использовать любой пакетный менеджер

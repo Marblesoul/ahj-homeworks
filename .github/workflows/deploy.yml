@@ -1,0 +1,66 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [video]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install testing dependencies
+        run: npm ci
+        working-directory: testing
+      - name: Build testing
+        run: npm run build
+        working-directory: testing
+
+      - name: Install forms dependencies
+        run: npm ci
+        working-directory: forms
+      - name: Build forms
+        run: npm run build
+        working-directory: forms
+
+      - name: Prepare site
+        run: |
+          mkdir -p site
+          cp -r testing/dist site/testing
+          cp -r forms/dist site/forms
+          cat > site/index.html << 'HTMLEOF'
+          <!DOCTYPE html>
+          <html lang="ru">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>AHJ Homeworks</title>
+            <style>
+              body { font-family: system-ui, sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; }
+              a { display: block; margin: 12px 0; font-size: 1.2em; }
+            </style>
+          </head>
+          <body>
+            <h1>AHJ Homeworks</h1>
+            <a href="testing/">Credit Card Validator (Testing)</a>
+            <a href="forms/">HTML Forms (Popovers, List Editor, Trip Calendar)</a>
+          </body>
+          </html>
+          HTMLEOF
+
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
