@@ -1,0 +1,56 @@
+name: Forms CI
+
+on:
+  push:
+    branches: [video]
+  pull_request:
+    branches: [video]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+        working-directory: forms
+      - name: Run unit tests
+        run: npm test
+        working-directory: forms
+      - name: Run E2E tests
+        run: npm run test:e2e
+        working-directory: forms
+      - name: Build
+        run: npm run build
+        working-directory: forms
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/video'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+        working-directory: forms
+      - name: Build
+        run: npm run build
+        working-directory: forms
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: forms/dist
+      - id: deployment
+        uses: actions/deploy-pages@v4

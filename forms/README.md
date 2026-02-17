@@ -1,5 +1,9 @@
 # Домашнее задание к занятию "Работа с HTML-формами"
 
+[![Forms CI](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/forms.yml/badge.svg)](https://github.com/Marblesoul/ahj-homeworks/actions/workflows/forms.yml)
+
+[GitHub Pages](https://marblesoul.github.io/ahj-homeworks/)
+
 Правила сдачи задания:
 1. **Важно**: в рамках этого ДЗ вы можете использовать любой пакетный менеджер
 2. Всё должно собираться через Webpack (включая картинки и стили) и выкладываться на Github Pages через Appveyor.
