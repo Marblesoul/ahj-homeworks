@@ -1,0 +1,183 @@
+/* Board */
+.trello-board {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Column */
+.trello-column {
+  background: #ebecf0;
+  border-radius: 6px;
+  padding: 10px;
+  width: 272px;
+  flex-shrink: 0;
+}
+
+.column-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+  padding: 4px 4px 8px;
+  margin: 0;
+}
+
+/* Card list */
+.card-list {
+  min-height: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 4px;
+  padding: 8px 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  color: #172b4d;
+  cursor: grab;
+  position: relative;
+  user-select: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: #f9f9f9;
+}
+
+.card-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+.card-delete {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0 2px;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.card:hover .card-delete {
+  opacity: 1;
+}
+
+.card-delete:hover {
+  color: #d44;
+}
+
+/* Ghost (dragging clone) */
+.card-ghost {
+  opacity: 0.7;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  cursor: grabbing;
+}
+
+/* Placeholder */
+.placeholder {
+  border: 2px dashed #a0a8b4;
+  border-radius: 4px;
+  background: rgba(160, 168, 180, 0.15);
+  flex-shrink: 0;
+}
+
+/* Add card area */
+.add-card-area {
+  margin-top: 8px;
+}
+
+.add-card-btn {
+  background: none;
+  border: none;
+  color: #5e6c84;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 6px 4px;
+  width: 100%;
+  text-align: left;
+  border-radius: 4px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.add-card-btn:hover {
+  background: rgba(9, 30, 66, 0.08);
+  color: #172b4d;
+}
+
+.add-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.add-card-form.hidden {
+  display: none;
+}
+
+.add-card-btn.hidden {
+  display: none;
+}
+
+.add-card-textarea {
+  width: 100%;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add-card-textarea:focus {
+  border-color: #0052cc;
+  box-shadow: 0 0 0 2px rgba(0, 82, 204, 0.2);
+}
+
+.add-card-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.add-card-confirm {
+  background: #0052cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.add-card-confirm:hover {
+  background: #0065ff;
+}
+
+.add-card-cancel {
+  background: none;
+  border: none;
+  color: #5e6c84;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.add-card-cancel:hover {
+  background: rgba(9, 30, 66, 0.08);
+  color: #172b4d;
+}

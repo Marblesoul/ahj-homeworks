@@ -1,0 +1,63 @@
+.dm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.dm-table th,
+.dm-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ebecf0;
+}
+
+.dm-table th {
+  background: #f4f5f7;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.dm-table tr:last-child td {
+  border-bottom: none;
+}
+
+.dm-table tr:hover td {
+  background: #f9f9fb;
+}
+
+.dm-size {
+  color: #5e6c84;
+  white-space: nowrap;
+}
+
+.dm-download-btn {
+  background: #0052cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.dm-download-btn:hover {
+  background: #0065ff;
+}
+
+.dm-counter {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #172b4d;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: inline-block;
+}

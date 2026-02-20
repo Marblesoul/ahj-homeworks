@@ -33,11 +33,19 @@ jobs:
         run: npm run build
         working-directory: forms
 
+      - name: Install dnd dependencies
+        run: yarn install --frozen-lockfile
+        working-directory: dnd
+      - name: Build dnd
+        run: yarn build
+        working-directory: dnd
+
       - name: Prepare site
         run: |
           mkdir -p site
           cp -r testing/dist site/testing
           cp -r forms/dist site/forms
+          cp -r dnd/dist site/dnd
           cat > site/index.html << 'HTMLEOF'
           <!DOCTYPE html>
           <html lang="ru">
@@ -54,6 +62,7 @@ jobs:
             <h1>AHJ Homeworks</h1>
             <a href="testing/">Credit Card Validator (Testing)</a>
             <a href="forms/">HTML Forms (Popovers, List Editor, Trip Calendar)</a>
+            <a href="dnd/">DnD — Trello, Image Manager, Download Manager</a>
           </body>
           </html>
           HTMLEOF
