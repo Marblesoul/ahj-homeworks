@@ -1,5 +1,9 @@
 # Домашнее задание к занятию "6. Работа с файлами, DnD"
 
+[![DnD CI](https://github.com/marblesoul/ahj-homeworks/actions/workflows/dnd.yml/badge.svg?branch=video)](https://github.com/marblesoul/ahj-homeworks/actions/workflows/dnd.yml)
+
+**GitHub Pages:** [marblesoul.github.io/ahj-homeworks/dnd/](https://marblesoul.github.io/ahj-homeworks/dnd/)
+
 Правила сдачи задания:
 
 1. **Важно**: в рамках этого ДЗ нужно использовать yarn (поэтому файла `package-lock.json` в репозитории быть не должно)
